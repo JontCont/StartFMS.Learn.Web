@@ -1,4 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/azure-blue.css";
+// @import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "../node_modules/@angular/material/prebuilt-themes/magenta-violet.css";
+// @import "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css";
+// @import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
+// @import "../node_modules/@angular/material/prebuilt-themes/rose-red.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+$margins: (mr: margin-right, mt: margin-top, mb: margin-bottom, ml: margin-left);
+
+@each $class,
+$property in $margins {
+  @for $i from 1 through 5 {
+    .#{$class}-#{$i} {
+      #{$property}: #{$i}rem;
+    }
+  }
+}
+
+
+.cursor-pointer{
+  cursor: pointer;
+}
